@@ -15,9 +15,9 @@ __Side note__: You can either build for iOS or Android. If you choose to build f
 
 ## Task 1 - Render User Data in a Carousel
 
-<img src="IMG_6579.PNG" alt="Example Image" style="width: 50%; height: auto;">
-
 Render all the example data into individual carousel components. The example data, `data.json`, is already imported into `App.tsx`.
+
+<img src="IMG_6579.PNG" alt="Example Image" style="width: 50%; height: auto;">
 
 ## Task 2 - Implement Search
 
