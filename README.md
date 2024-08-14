@@ -13,13 +13,16 @@ Thank you for your interest in Popl! Here's an overview of the technical assessm
 
 Side note: You can either build for iOS or Android. If you choose to build for iOS, please use your own Apple Developer Account to make sure the project compiles. 
 
-## Task 1 - Render User Data in Carousel: 
-![Example Image](IMG_6579.PNG)
+## Task 1 - Render User Data in a Carousel
 
-Render all the example data into their own carousel component. The example data `data.json` is already imported into `App.tsx`. 
+<img src="IMG_6579.PNG" alt="Example Image" style="width: 50%; height: auto;">
 
-## Task 2 - Implement Search: 
+Render all the example data into individual carousel components. The example data, `data.json`, is already imported into `App.tsx`.
 
-User can search user's name or address. IF user is found, display only found user/users in the Carousel. 
+## Task 2 - Implement Search
 
+Allow the user to search by name or address. If a user is found, display only the matching user(s) in the carousel.
 
+## Side Note
+
+Keep it simple 🙂 We'll chat more in depth during our video call.
