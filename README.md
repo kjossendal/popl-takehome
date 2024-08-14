@@ -9,9 +9,9 @@ Thank you for your interest in Popl! Here's an overview of the technical assessm
    Once you've finished, please add @gianisalive as contributor, and notify Jorgen by sending an email to [jorgen.phillips@popl.co](mailto:jorgen.phillips@popl.co).
 
 3. **Feedback and Pair Programming**  
-   To conclude the technical portion of the interview, we'll schedule a video call to review your assignment together and discuss any potential improvements. Alternatively, you can also choose to showcase other project repo you've worked in the past.
+   To conclude the technical portion of the interview, we'll schedule a video call to review your assignment together and discuss any potential improvements. In addition, you may also choose to showcase a personal project that you're proud of if we have remaining time.
 
-Side note: You can either build for iOS or Android. If you choose to build for iOS, please use your own Apple Developer Account to make sure the project compiles. 
+__Side note__: You can either build for iOS or Android. If you choose to build for iOS, please use your own Apple Developer Account to make sure the project compiles. 
 
 ## Task 1 - Render User Data in a Carousel
 
