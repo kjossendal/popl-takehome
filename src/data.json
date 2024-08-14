@@ -1,0 +1,359 @@
+[
+  {
+    "id": "1",
+    "name": {
+      "first": "John",
+      "last": "Doe"
+    },
+    "phoneNumbers": [
+      {
+        "type": "mobile",
+        "number": "+1-555-1234"
+      },
+      {
+        "type": "home",
+        "number": "+1-555-5678"
+      }
+    ],
+    "email": "john.doe@example.com",
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "postalCode": "90210",
+      "country": "USA"
+    },
+    "company": {
+      "name": "Example Corp",
+      "department": "Engineering",
+      "position": "Software Engineer"
+    }
+  },
+  {
+    "id": "2",
+    "name": {
+      "first": "Jane",
+      "last": "Smith"
+    },
+    "phoneNumbers": [
+      {
+        "type": "mobile",
+        "number": "+44-20-1234-5678"
+      }
+    ],
+    "email": "jane.smith@example.co.uk",
+    "address": {
+      "street": "456 Elm St",
+      "city": "London",
+      "postalCode": "SW1A 1AA",
+      "country": "UK"
+    }
+  },
+  {
+    "id": "1",
+    "name": {
+      "first": "Michael",
+      "middle": "A",
+      "last": "Johnson"
+    },
+    "phoneNumbers": [
+      {
+        "type": "work",
+        "number": "+61-2-9876-5432"
+      }
+    ],
+    "email": "michael.johnson@example.com.au",
+    "address": {
+      "street": "789 Maple St",
+      "city": "Sydney",
+      "state": "NSW",
+      "postalCode": "2000",
+      "country": "Australia"
+    },
+    "socialMedia": {
+      "linkedIn": "michaeljohnson",
+      "twitter": "@mjohnson"
+    }
+  },
+  {
+    "id": "4",
+    "name": {
+      "first": "Emily",
+      "last": "Davis"
+    },
+    "phoneNumbers": [],
+    "email": "emily.davis@example.ca",
+    "address": {
+      "street": "101 Oak St",
+      "city": "Toronto",
+      "province": "ON",
+      "postalCode": "M5H 2N2",
+      "country": "Canada"
+    },
+    "notes": [
+      {
+        "date": "2023-08-12",
+        "content": "Met at a conference."
+      },
+      {
+        "date": "2023-08-15",
+        "content": "Followed up with an email."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": {
+      "first": "David",
+      "last": "Miller"
+    },
+    "phoneNumbers": [
+      {
+        "type": "mobile",
+        "number": "+1-415-987-6543"
+      }
+    ],
+    "email": "david.miller@example.com",
+    "address": {
+      "street": "202 Pine St",
+      "city": "San Francisco",
+      "state": "CA",
+      "postalCode": "94104",
+      "country": "USA"
+    },
+    "birthday": "1985-05-15"
+  },
+  {
+    "id": "6",
+    "name": {
+      "first": "Sophia",
+      "last": "Brown"
+    },
+    "phoneNumbers": [
+      {
+        "type": "work",
+        "number": "+49-30-1234-5678"
+      }
+    ],
+    "email": "sophia.brown@example.de",
+    "address": {
+      "street": "303 Birch St",
+      "city": "Berlin",
+      "postalCode": "10115",
+      "country": "Germany"
+    },
+    "company": {
+      "name": "Tech Solutions",
+      "department": "Marketing",
+      "position": "Marketing Manager"
+    },
+    "notes": [
+      {
+        "date": "2024-01-10",
+        "content": "Discussed potential partnership."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": {
+      "first": "Lucas",
+      "last": "Martinez"
+    },
+    "phoneNumbers": [
+      {
+        "type": "home",
+        "number": "+34-91-123-4567"
+      }
+    ],
+    "email": "lucas.martinez@example.es",
+    "address": {
+      "street": "404 Cedar St",
+      "city": "Madrid",
+      "postalCode": "28001",
+      "country": "Spain"
+    },
+    "socialMedia": {
+      "facebook": "lucasmartinez",
+      "instagram": "@lucas.m"
+    }
+  },
+  {
+    "id": "8",
+    "name": {
+      "first": "Olivia",
+      "middle": "Grace",
+      "last": "Lee"
+    },
+    "phoneNumbers": [
+      {
+        "type": "mobile",
+        "number": "+82-2-987-6543"
+      }
+    ],
+    "email": "olivia.lee@example.kr",
+    "address": {
+      "street": "505 Maple St",
+      "city": "Seoul",
+      "postalCode": "04501",
+      "country": "South Korea"
+    },
+    "birthday": "1990-11-25",
+    "company": {
+      "name": "Global Ventures",
+      "department": "Sales",
+      "position": "Sales Director"
+    }
+  },
+  {
+    "id": "9",
+    "name": {
+      "first": "James",
+      "last": "Wang"
+    },
+    "phoneNumbers": [
+      {
+        "type": "work",
+        "number": "+86-10-1234-5678"
+      }
+    ],
+    "email": "james.wang@example.cn",
+    "address": {
+      "street": "606 Elm St",
+      "city": "Beijing",
+      "postalCode": "100000",
+      "country": "China"
+    },
+    "notes": [
+      {
+        "date": "2023-12-01",
+        "content": "Presentation on product development."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": {
+      "first": "Emma",
+      "last": "Garcia"
+    },
+    "phoneNumbers": [
+      {
+        "type": "mobile",
+        "number": "+1-305-987-6543"
+      }
+    ],
+    "email": "emma.garcia@example.mx",
+    "address": {
+      "street": "707 Pine St",
+      "city": "Mexico City",
+      "postalCode": "01000",
+      "country": "Mexico"
+    },
+    "socialMedia": {
+      "twitter": "@emmag"
+    }
+  },
+  {
+    "id": "11",
+    "name": {
+      "first": "Aiden",
+      "last": "Kim"
+    },
+    "phoneNumbers": [
+      {
+        "type": "home",
+        "number": "+82-51-123-4567"
+      }
+    ],
+    "email": "aiden.kim@example.kr",
+    "address": {
+      "street": "808 Cedar St",
+      "city": "Busan",
+      "postalCode": "600011",
+      "country": "South Korea"
+    },
+    "company": {
+      "name": "Innovatech",
+      "department": "Research & Development",
+      "position": "Lead Developer"
+    },
+    "birthday": "1992-03-18"
+  },
+  {
+    "id": "12",
+    "name": {
+      "first": "Isabella",
+      "last": "Rodriguez"
+    },
+    "phoneNumbers": [
+      {
+        "type": "mobile",
+        "number": "+34-91-765-4321"
+      }
+    ],
+    "email": "isabella.rodriguez@example.es",
+    "address": {
+      "street": "909 Oak St",
+      "city": "Barcelona",
+      "postalCode": "08001",
+      "country": "Spain"
+    },
+    "notes": [
+      {
+        "date": "2024-02-25",
+        "content": "Scheduled meeting to discuss new project."
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "name": {
+      "first": "Liam",
+      "middle": "Alexander",
+      "last": "Nguyen"
+    },
+    "phoneNumbers": [
+      {
+        "type": "work",
+        "number": "+84-8-1234-5678"
+      }
+    ],
+    "email": "liam.nguyen@example.vn",
+    "address": {
+      "street": "1010 Maple St",
+      "city": "Ho Chi Minh City",
+      "postalCode": "700000",
+      "country": "Vietnam"
+    },
+    "company": {
+      "name": "AsiaTech",
+      "department": "Operations",
+      "position": "Operations Manager"
+    }
+  },
+  {
+    "id": "14",
+    "name": {
+      "first": "Mia",
+      "last": "Patel"
+    },
+    "phoneNumbers": [
+      {
+        "type": "mobile",
+        "number": "+91-22-1234-5678"
+      }
+    ],
+    "email": "mia.patel@example.in",
+    "address": {
+      "street": "1111 Birch St",
+      "city": "Mumbai",
+      "postalCode": "400001",
+      "country": "India"
+    },
+    "birthday": "1987-08-08",
+    "socialMedia": {
+      "linkedin": "miapatel"
+    }
+  }
+]

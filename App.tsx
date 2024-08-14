@@ -1,118 +1,116 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
   View,
+  Platform,
+  Dimensions,
+  TextInput,
 } from 'react-native';
+import PoplCarouselComponent from './src/PoplCarouselComponent';
+import data from './src/data.json';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+type PhoneType = 'iphone_m' | 'iphone_l' | 'iphone_sm';
+type User = {
+  id: string;
+  name: {
+    first: string;
+    middle: string;
+    last: string;
+  };
+  phoneNumbers?: {
+    type: string;
+    number: string;
+  }[];
+  email?: string;
+  address?: {
+    street?: string;
+    city?: string;
+    state?: string;
+    postalCode?: string;
+    country?: string;
+  };
+  socialMedia?: {[key: string]: string};
+};
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
+const carouselImageWidth = Dimensions.get('screen').width;
+const carouselImageHeight = Dimensions.get('screen').width * 1.35;
+let imageScale = 1;
+let phoneType: PhoneType = 'iphone_m';
+if (Platform.OS === 'ios' && Dimensions.get('screen').height > 900) {
+  phoneType = 'iphone_l';
 }
+if (Platform.OS === 'ios' && Dimensions.get('screen').height < 700) {
+  phoneType = 'iphone_sm';
+}
+if (phoneType === 'iphone_l') {
+  imageScale = 1.05;
+}
+if (phoneType === 'iphone_sm') {
+  imageScale = 0.84;
+}
+const carouselItemWidth = Dimensions.get('screen').width * 0.74 * imageScale;
+const carouselHeight = Math.floor(Dimensions.get('screen').height * 0.6);
+
+const styles = StyleSheet.create({
+  appContainer: {
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  carouselItem: {
+    width: carouselItemWidth,
+    height: carouselHeight,
+    marginLeft: (Dimensions.get('screen').width - carouselItemWidth) / 2,
+    padding: 20,
+    borderRadius: 20,
+    overflow: 'hidden',
+    backgroundColor: '#F9F9F9',
+  },
+  searchField: {
+    width: '78%',
+    height: 70,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 20,
+    marginBottom: 20,
+    paddingHorizontal: 20,
+  },
+  rowItem: {
+    flexDirection: 'row',
+    marginBottom: 10,
+  },
+});
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  const userData = data;
+  /****************************************************/
+  /***************** Add Your Code Here ***************/
+  /****************************************************/
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+    <SafeAreaView style={styles.appContainer}>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <View style={styles.appContainer}>
+        <TextInput
+          style={styles.searchField}
+          placeholder="Card information to search"
+          placeholderTextColor="#999999"
+        />
+        <PoplCarouselComponent
+          items={userData}
+          height={carouselImageHeight * imageScale}
+          width={carouselImageWidth}
+          parallaxScrollingOffset={phoneType === 'iphone_sm' ? 130 : 110}
+          parallaxAdjacentItemScale={phoneType === 'iphone_sm' ? 0.9 : 0.8}
+          // renderItem={() => {}}
+        />
+      </View>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
