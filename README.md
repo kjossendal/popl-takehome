@@ -8,7 +8,7 @@ Thank you for your interest in Popl! Here's an overview of the technical assessm
 2. **Submit Your Work**  
    Once you've finished, please notify Jorgen by sending an email to [jorgen.phillips@popl.co](mailto:jorgen.phillips@popl.co).
 
-3. **Final Review**  
+3. **Feedback and Pair Programming**  
    To conclude the technical portion of the interview, we'll schedule a video call to review your assignment together and discuss any potential improvements.
 
 Side note: You can either build for iOS or Android. If you choose to build for iOS, please use your own Apple Developer Account to make sure the project compiles. 
