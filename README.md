@@ -25,4 +25,4 @@ Allow the user to search by name or address. If a user is found, display only th
 
 ## Side Note
 
-Keep it simple 🙂 We'll chat more in depth during our video call if you have any questions, feel free to reach out to us.
+Keep it simple 🙂 We'll chat more in depth during our pair programming session. If you have any questions, feel free to reach out to us.
