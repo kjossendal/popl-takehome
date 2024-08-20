@@ -8,6 +8,7 @@ import {
   Platform,
   Dimensions,
   TextInput,
+  Text,
 } from 'react-native';
 import PoplCarouselComponent from './src/PoplCarouselComponent';
 import data from './src/data.json';
@@ -31,6 +32,11 @@ type User = {
     state?: string;
     postalCode?: string;
     country?: string;
+  };
+  company?: {
+    name?: string;
+    department?: string;
+    position?: string;
   };
   socialMedia?: {[key: string]: string};
 };
@@ -90,6 +96,68 @@ function App(): React.JSX.Element {
   /****************************************************/
   /***************** Add Your Code Here ***************/
   /****************************************************/
+  const [searchResults, setSearchResults] =
+    React.useState<typeof userData>(userData);
+  const renderItem = ({item}: {item: User}) => {
+    return (
+      <View style={styles.carouselItem}>
+        <View style={styles.rowItem}>
+          <Text>
+            Name: {item.name.first} {item.name.last}
+          </Text>
+        </View>
+        {item.phoneNumbers?.map((phone, index) => (
+          <View style={styles.rowItem} key={index}>
+            <Text>
+              {phone.type}: {phone.number}
+            </Text>
+          </View>
+        ))}
+        <View style={styles.rowItem}>
+          <Text>Email: {item.email}</Text>
+        </View>
+        <View style={styles.rowItem}>
+          <Text>Address:</Text>
+          <View style={{marginLeft: 4}}>
+            <Text>{item.address?.street}</Text>
+            <Text>{item.address?.city}</Text>
+            <Text>
+              {item.address?.state} {item.address?.postalCode}
+            </Text>
+            <Text>{item.address?.country}</Text>
+          </View>
+        </View>
+        {item.company && (
+          <View style={styles.rowItem}>
+            <Text>Company:</Text>
+            <View style={{marginLeft: 4}}>
+              <Text>{item.company.name}</Text>
+              <Text>{item.company.department}</Text>
+              <Text>{item.company.position}</Text>
+            </View>
+          </View>
+        )}
+        {item.socialMedia &&
+          Object.entries(item.socialMedia).map(([key, value], index) => (
+            <View style={styles.rowItem} key={index}>
+              <Text>
+                {key}: {value}
+              </Text>
+            </View>
+          ))}
+      </View>
+    );
+  };
+
+  const handleSearch = (text: string) => {
+    const r = data.filter(user => {
+      const userNameAndAddress = `${user.name.first} ${user.name.last} ${user.address?.street} ${user.address?.city} ${user.address?.state} ${user.address?.postalCode} ${user.address?.country}`;
+      if (userNameAndAddress.toLowerCase().includes(text.toLowerCase())) {
+        return user;
+      }
+    });
+    setSearchResults(r);
+  };
 
   return (
     <SafeAreaView style={styles.appContainer}>
@@ -99,14 +167,15 @@ function App(): React.JSX.Element {
           style={styles.searchField}
           placeholder="Card information to search"
           placeholderTextColor="#999999"
+          onChangeText={handleSearch}
         />
         <PoplCarouselComponent
-          items={userData}
+          items={searchResults}
           height={carouselImageHeight * imageScale}
           width={carouselImageWidth}
           parallaxScrollingOffset={phoneType === 'iphone_sm' ? 130 : 110}
           parallaxAdjacentItemScale={phoneType === 'iphone_sm' ? 0.9 : 0.8}
-          // renderItem={() => {}}
+          renderItem={renderItem}
         />
       </View>
     </SafeAreaView>
